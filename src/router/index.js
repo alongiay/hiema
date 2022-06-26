@@ -5,6 +5,7 @@ const Home = () => import('@/views/Home')
 const Video = () => import('@/views/Video')
 const Question = () => import('@/views/Question')
 const My = () => import('@/views/My')
+const Login = () => import('@/views/Login')
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,8 @@ const routes = [
         path: 'my', component: My
       }
     ]
+  }, {
+    path: '/login', component: Login
   }
 ]
 
