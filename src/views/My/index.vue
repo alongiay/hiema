@@ -1,7 +1,10 @@
 <template>
   <div>
     <!-- 登录 -->
-    <div class="header header-login" v-if="$store.state.user && $store.state.user.token">
+    <div
+      class="header header-login"
+      v-if="$store.state.user && $store.state.user.token"
+    >
       <div class="avatar">
         <div class="left">
           <van-image
@@ -16,25 +19,25 @@
       </div>
       <ul class="list">
         <li>
-          <p>{{userInfo.art_count}}</p>
+          <p>{{ userInfo.art_count }}</p>
           <p>头条</p>
         </li>
         <li>
-          <p>{{userInfo.fans_count}}</p>
+          <p>{{ userInfo.fans_count }}</p>
           <p>头条</p>
         </li>
         <li>
-          <p>{{userInfo.follow_count}}</p>
+          <p>{{ userInfo.follow_count }}</p>
           <p>头条</p>
         </li>
         <li>
-          <p>{{userInfo.link_count}}</p>
+          <p>{{ userInfo.link_count }}</p>
           <p>头条</p>
         </li>
       </ul>
     </div>
     <!-- 未登录 -->
-    <div class="header header-notlogin"> v-else
+    <div class="header header-notlogin" v-else>
       <div class="inner" @click="$router.push('/login')">
         <img src="@/assets/mobile.png" />
         <p>登录/注册</p>

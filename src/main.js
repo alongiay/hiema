@@ -11,13 +11,15 @@ import '@/styles/index.less'
 import HmIcon from './components/HmIcon.vue'
 
 import * as obj from '@/filters'
+import FollowUser from '@/components/FollowUser.vue'
+import '@/components'
 Vue.component('HmIcon', HmIcon)
 Object.keys(obj).forEach(key => {
   Vue.filter(key, obj[key])
 })
 Vue.config.productionTip = false
 Vue.use(Vant)
-
+Vue.component(FollowUser.name, FollowUser)
 new Vue({
   router,
   store,
